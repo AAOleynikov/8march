@@ -17,7 +17,7 @@
         .card {
             position: relative;
             width: 350px;
-            height: 250px;
+            height: 450px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,6 +28,7 @@
             text-align: center;
             cursor: pointer;
             transition: transform 0.5s;
+            overflow: hidden;
         }
         .card:hover {
             transform: scale(1.05);
@@ -36,16 +37,35 @@
             font-size: 22px;
             font-weight: bold;
             color: #ff477e;
+            z-index: 1;
         }
         .hidden-message {
             display: none;
             font-size: 18px;
             color: #333;
+            z-index: 1;
         }
         .group-info {
             margin-top: 10px;
             font-size: 16px;
             color: #555;
+            z-index: 1;
+        }
+        .flower-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            display: flex;
+            flex-wrap: wrap;
+            opacity: 0.2;
+        }
+        .flower-images img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -53,7 +73,9 @@
     <div class="card" onclick="showMessage()">
         <div class="message">Нажмите, чтобы открыть 🎉</div>
         <div class="hidden-message">С наилучшими пожеланиями, дорогие девушки из группы РК6-63Б МГТУ им. Н.Э. Баумана! 🌟</div>
-        <div class="group-info">Группа РК6-63Б, кафедра «Системы автоматизированного проектирования»</div>
+        <div class="flower-images">
+            <img src="Image.jpg">
+        </div>
     </div>
 
     <script>
