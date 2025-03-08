@@ -51,18 +51,17 @@
             color: #555;
             z-index: 1;
         }
-        .flower-images {
+        .flower-image {
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 0;
-            display: flex;
-            flex-wrap: wrap;
-            opacity: 0.2;
+            opacity: 0.5;
         }
-        .flower-images img {
+        .flower-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -73,8 +72,9 @@
     <div class="card" onclick="showMessage()">
         <div class="message">Нажмите, чтобы открыть 🎉</div>
         <div class="hidden-message">С наилучшими пожеланиями, дорогие девушки из группы РК6-63Б МГТУ им. Н.Э. Баумана! 🌟</div>
-        <div class="flower-images">
-            <img src="Image.jpg">
+        <div class="group-info">Группа РК6-63Б, кафедра «Системы автоматизированного проектирования»</div>
+        <div class="flower-image">
+            <img src="https://example.com/flower.jpg" alt="Цветы">
         </div>
     </div>
 
@@ -82,6 +82,7 @@
         function showMessage() {
             document.querySelector('.message').style.display = 'none';
             document.querySelector('.hidden-message').style.display = 'block';
+            document.querySelector('.flower-image').style.display = 'block';
         }
     </script>
 </body>
